@@ -11,16 +11,25 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    contentBase: './public',     
+    contentBase: path.resolve(__dirname, 'dist'),
     hot: true,
     host: 'localhost',
     port: 9000,
-    },
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use:['style-loader','css-loader']
+      }
+    ]
+  },
+
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
       title: 'webpack开发环境配置',
-      template: './public/index.html',
+      template: './src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin()
   ]
