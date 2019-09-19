@@ -17,7 +17,7 @@ module.exports = merge(commonConfig, {
       })
     }]
   },
-  devtool: 'source-map',     //用作调试，
+  devtool: 'source-map',     //用作调试，测试
 
   plugins: [
     new UglifyJSPlugin(),
