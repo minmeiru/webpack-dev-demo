@@ -7,6 +7,8 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
+console.log(1111)
+
 module.exports = merge(commonConfig, {
   mode: 'development',
   devServer: {
